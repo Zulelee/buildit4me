@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/moving-border";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import Image from "next/image";
 
@@ -80,16 +80,12 @@ export default function Navbar() {
             ))}
 
             {/* CTA Button */}
-            <Button
-              className="text-sm font-medium text-white"
-              containerClassName="h-10 w-auto px-6"
-              borderRadius="1.5rem"
-            >
+            <GradientButton className="text-sm font-medium">
               <span className="flex items-center gap-2">
                 Get Started
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
-            </Button>
+            </GradientButton>
           </div>
 
           {/* Mobile menu button */}
@@ -122,16 +118,12 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="pt-2">
-                <Button
-                  className="w-full text-sm font-medium text-white"
-                  containerClassName="h-10 w-full"
-                  borderRadius="1.5rem"
-                >
+                <GradientButton className="w-full text-sm font-medium">
                   <span className="flex items-center gap-2">
                     Get Started
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
-                </Button>
+                </GradientButton>
               </div>
             </div>
           </div>

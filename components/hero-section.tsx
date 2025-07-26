@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/moving-border";
+import { GradientButton } from "@/components/ui/gradient-button";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -155,17 +155,13 @@ export default function HeroSection() {
           it all!
         </p>
 
-        {/* Moving Border CTA Button */}
-        <Button
-          className="text-lg font-semibold text-white"
-          containerClassName="h-16 w-auto px-8"
-          borderRadius="1.75rem"
-        >
+        {/* Gradient CTA Button */}
+        <GradientButton className="text-lg font-semibold">
           <span className="flex items-center gap-2">
             Tell Us What You Need
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </span>
-        </Button>
+        </GradientButton>
       </div>
 
       {/* Subtle Parallax Effect */}
