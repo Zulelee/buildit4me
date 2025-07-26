@@ -141,8 +141,8 @@ export default function HeroSection() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+      <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
           Got an idea?{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
             We&apos;ll build it
@@ -150,7 +150,7 @@ export default function HeroSection() {
           for you.
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
           Web apps, mobile apps, chatbots, voice agents, automations — we can do
           it all!
         </p>

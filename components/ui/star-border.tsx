@@ -51,7 +51,7 @@ export function StarBorder<T extends ElementType = "button">({
       />
       <div
         className={cn(
-          "relative z-1 border text-white text-center text-base py-4 px-6 rounded-[20px]",
+          "relative z-1 border text-white text-center text-sm sm:text-base py-3 sm:py-4 px-4 sm:px-6 rounded-[20px]",
           "bg-black border-orange-500/30",
           "hover:border-orange-500/60 transition-colors duration-300"
         )}

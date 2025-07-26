@@ -34,7 +34,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
           <div className="flex items-center">
             <div className="relative group">
@@ -55,7 +55,7 @@ export default function Navbar() {
                     width={40}
                     height={40}
                   />
-                  <h1 className="text-xl lg:text-2xl font-bold text-white">
+                  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
                       BuildIt
                     </span>

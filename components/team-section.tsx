@@ -45,23 +45,23 @@ export default function TeamSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
             Meet the{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
               Founders
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
             BuildIt4Me is led by a trio of builders who blend tech, strategy,
             and execution.
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {cofounders.map((founder, index) => (
             <FlipCard key={founder.name} {...founder} />
           ))}
@@ -89,11 +89,11 @@ function FlipCard({
   description,
 }: FlipCardProps) {
   return (
-    <div className="flip-card group relative h-80">
+    <div className="flip-card group relative h-72 sm:h-80">
       <div className="flip-card-inner">
         {/* Front of card */}
         <div className="flip-card-front">
-          <div className="relative h-full rounded-2xl border border-orange-500/30 bg-black p-8 overflow-hidden">
+          <div className="relative h-full rounded-2xl border border-orange-500/30 bg-black p-6 sm:p-8 overflow-hidden">
             {/* Puzzle Pattern Background */}
             <div className="absolute inset-0 w-full h-full opacity-25">
               <svg

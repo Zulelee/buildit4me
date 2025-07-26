@@ -56,22 +56,22 @@ export default function ServicesSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6">
             What We{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
               Build
             </span>
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-2">
             From MVPs to AI agents — we&apos;ve got you covered.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={index}
@@ -95,7 +95,7 @@ interface ServiceCardProps {
 function ServiceCard({ icon, title, description }: ServiceCardProps) {
   return (
     <div className="group relative">
-      <div className="relative h-full rounded-2xl border border-gray-800/50 p-6 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:bg-black/70">
+      <div className="relative h-full rounded-2xl border border-gray-800/50 p-4 sm:p-6 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:bg-black/70">
         <GlowingEffect
           spread={40}
           glow={true}
@@ -108,7 +108,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
 
         <div className="relative z-10 flex flex-col h-full">
           {/* Icon */}
-          <div className="w-fit rounded-xl border border-gray-700/50 bg-gray-900/50 p-3 mb-6 group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all duration-300">
+          <div className="w-fit rounded-xl border border-gray-700/50 bg-gray-900/50 p-2 sm:p-3 mb-4 sm:mb-6 group-hover:border-orange-500/50 group-hover:bg-orange-500/10 transition-all duration-300">
             <div className="text-orange-400 group-hover:text-orange-300 transition-colors duration-300">
               {icon}
             </div>
@@ -116,7 +116,7 @@ function ServiceCard({ icon, title, description }: ServiceCardProps) {
 
           {/* Content */}
           <div className="flex-1 space-y-4">
-            <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-orange-100 transition-colors duration-300">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white group-hover:text-orange-100 transition-colors duration-300">
               {title}
             </h3>
             <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300 leading-relaxed">
