@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
-import { GradientButton } from "@/components/ui/gradient-button";
+import { StarBorder } from "@/components/ui/star-border";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import Image from "next/image";
 
@@ -80,12 +80,16 @@ export default function Navbar() {
             ))}
 
             {/* CTA Button */}
-            <GradientButton className="text-sm font-medium">
+            <StarBorder
+              className="text-sm font-medium"
+              color="#ff6b35"
+              speed="5s"
+            >
               <span className="flex items-center gap-2">
                 Get Started
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
-            </GradientButton>
+            </StarBorder>
           </div>
 
           {/* Mobile menu button */}
@@ -118,12 +122,16 @@ export default function Navbar() {
                 </a>
               ))}
               <div className="pt-2">
-                <GradientButton className="w-full text-sm font-medium">
+                <StarBorder
+                  className="w-full text-sm font-medium"
+                  color="#ff6b35"
+                  speed="5s"
+                >
                   <span className="flex items-center gap-2">
                     Get Started
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </span>
-                </GradientButton>
+                </StarBorder>
               </div>
             </div>
           </div>

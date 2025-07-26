@@ -1,6 +1,6 @@
 "use client";
 
-import { GradientButton } from "@/components/ui/gradient-button";
+import { StarBorder } from "@/components/ui/star-border";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -155,13 +155,17 @@ export default function HeroSection() {
           it all!
         </p>
 
-        {/* Gradient CTA Button */}
-        <GradientButton className="text-lg font-semibold">
+        {/* Star Border CTA Button */}
+        <StarBorder
+          className="text-lg font-semibold"
+          color="#ff6b35"
+          speed="4s"
+        >
           <span className="flex items-center gap-2">
             Tell Us What You Need
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </span>
-        </GradientButton>
+        </StarBorder>
       </div>
 
       {/* Subtle Parallax Effect */}
