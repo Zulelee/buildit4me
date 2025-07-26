@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/moving-border";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -140,13 +140,6 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      {/* Floating Logo */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="text-white text-2xl font-bold tracking-wider animate-pulse">
-          BuildIt4Me
-        </div>
-      </div>
-
       {/* Hero Content */}
       <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -162,14 +155,16 @@ export default function HeroSection() {
           it all!
         </p>
 
-        {/* Glassmorphism CTA Button */}
+        {/* Moving Border CTA Button */}
         <Button
-          className="group relative px-8 py-4 text-lg font-semibold bg-white/10 backdrop-blur-md border border-orange-500/50 text-white hover:bg-white/20 hover:border-orange-400 transition-all duration-300 shadow-2xl hover:shadow-orange-500/25"
-          size="lg"
+          className="text-lg font-semibold text-white"
+          containerClassName="h-16 w-auto px-8"
+          borderRadius="1.75rem"
         >
-          <span className="relative z-10">Tell Us What You Need</span>
-          <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          <div className="absolute inset-0 rounded-md bg-gradient-to-r from-orange-500/20 to-orange-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <span className="flex items-center gap-2">
+            Tell Us What You Need
+            <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+          </span>
         </Button>
       </div>
 

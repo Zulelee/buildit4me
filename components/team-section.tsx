@@ -2,6 +2,7 @@
 
 import { Mail, Linkedin } from "lucide-react";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import Image from "next/image";
 
 const cofounders = [
   {
@@ -9,7 +10,7 @@ const cofounders = [
     role: "All-Rounder — Tech & Client",
     email: "zulekha@buildit4me.com",
     linkedin: "https://linkedin.com/in/zulekha",
-    photo: "https://source.unsplash.com/featured/face?sig=1",
+    photo: "/zulele.jpeg",
     description:
       "Leading strategy and client relationships with technical expertise.",
   },
@@ -18,7 +19,7 @@ const cofounders = [
     role: "Tech & Operations",
     email: "hamza@buildit4me.com",
     linkedin: "https://linkedin.com/in/hamza",
-    photo: "https://source.unsplash.com/featured/face?sig=2",
+    photo: "/hamza.jpeg",
     description: "Driving automation and AI solutions for scalable operations.",
   },
   {
@@ -26,7 +27,7 @@ const cofounders = [
     role: "Client Success & PM",
     email: "narmeen@buildit4me.com",
     linkedin: "https://linkedin.com/in/narmeen",
-    photo: "https://source.unsplash.com/featured/face?sig=3",
+    photo: "/nemo.jpeg",
     description:
       "Ensuring project delivery and client satisfaction excellence.",
   },
@@ -92,7 +93,92 @@ function FlipCard({
       <div className="flip-card-inner">
         {/* Front of card */}
         <div className="flip-card-front">
-          <div className="relative h-full rounded-2xl border border-orange-500/30 bg-gradient-to-br from-black via-gray-900 to-black p-8">
+          <div className="relative h-full rounded-2xl border border-orange-500/30 bg-black p-8 overflow-hidden">
+            {/* Puzzle Pattern Background */}
+            <div className="absolute inset-0 w-full h-full opacity-25">
+              <svg
+                className="w-full h-full"
+                viewBox="0 0 400 320"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <filter
+                    id="glow"
+                    x="-50%"
+                    y="-50%"
+                    width="200%"
+                    height="200%"
+                  >
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <linearGradient
+                    id="orangeGlow"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#ff8c42" stopOpacity="1" />
+                    <stop offset="50%" stopColor="#ffa726" stopOpacity="1" />
+                    <stop offset="100%" stopColor="#ff8c42" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+
+                {/* Puzzle Pattern Paths */}
+                <path
+                  d="M50 50 L150 50 L150 100 L200 100 L200 150 L150 150 L150 200 L100 200 L100 150 L50 150 Z"
+                  stroke="url(#orangeGlow)"
+                  strokeWidth="2"
+                  fill="none"
+                  filter="url(#glow)"
+                  className="animate-pulse-glow"
+                />
+                <path
+                  d="M250 75 L350 75 L350 125 L400 125 L400 175 L350 175 L350 225 L300 225 L300 175 L250 175 Z"
+                  stroke="url(#orangeGlow)"
+                  strokeWidth="2"
+                  fill="none"
+                  filter="url(#glow)"
+                  className="animate-pulse-glow"
+                />
+                <path
+                  d="M75 250 L175 250 L175 300 L225 300 L225 350 L175 350 L175 400 L125 400 L125 350 L75 350 Z"
+                  stroke="url(#orangeGlow)"
+                  strokeWidth="2"
+                  fill="none"
+                  filter="url(#glow)"
+                  className="animate-pulse-glow"
+                />
+
+                {/* Connecting Lines */}
+                <path
+                  d="M150 100 L250 75"
+                  stroke="url(#orangeGlow)"
+                  strokeWidth="1.5"
+                  filter="url(#glow)"
+                  className="animate-pulse-glow"
+                />
+                <path
+                  d="M200 150 L300 175"
+                  stroke="url(#orangeGlow)"
+                  strokeWidth="1.5"
+                  filter="url(#glow)"
+                  className="animate-pulse-glow"
+                />
+                <path
+                  d="M150 200 L250 225"
+                  stroke="url(#orangeGlow)"
+                  strokeWidth="1.5"
+                  filter="url(#glow)"
+                  className="animate-pulse-glow"
+                />
+              </svg>
+            </div>
             <GlowingEffect
               spread={40}
               glow={true}
@@ -153,10 +239,12 @@ function FlipCard({
 
             <div className="relative z-10 h-full flex flex-col items-center justify-center p-6">
               <div className="relative mb-6">
-                <img
+                <Image
                   src={photo}
                   alt={name}
                   className="w-32 h-32 rounded-full object-cover ring-4 ring-orange-500/30 shadow-2xl"
+                  width={100}
+                  height={100}
                 />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-500/20 to-transparent" />
               </div>
