@@ -16,20 +16,25 @@ export default function Footer() {
             </span>
           </div>
 
+          {/* Navigation Links */}
+          <div className="flex items-center gap-6 text-sm">
+            <a
+              href="#services"
+              className="text-gray-400 hover:text-orange-400 transition-colors duration-300"
+            >
+              Services
+            </a>
+            <a
+              href="#our-work"
+              className="text-gray-400 hover:text-orange-400 transition-colors duration-300"
+            >
+              Our Work
+            </a>
+          </div>
+
           {/* Copyright */}
           <div className="text-gray-400 text-sm">
             © {new Date().getFullYear()} BuildIt4Me. All rights reserved.
-          </div>
-
-          {/* Contact */}
-          <div className="flex items-center gap-4">
-            <StarBorder
-              className="text-xs font-medium"
-              color="#ff6b35"
-              speed="6s"
-            >
-              Contact Us
-            </StarBorder>
           </div>
         </div>
       </div>
