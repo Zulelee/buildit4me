@@ -20,6 +20,38 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Email Configuration
+
+The chatbot uses nodemailer to send emails. To set up email functionality:
+
+1. Create a `.env.local` file in the root directory
+2. Add the following environment variables:
+
+```env
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
+```
+
+**For GoDaddy Email setup:**
+
+- Use your regular GoDaddy email password
+- Make sure your email is: `your-email@yourdomain.com`
+- The password is your regular GoDaddy email password
+- Server settings: `smtpout.secureserver.net` on port 465 with SSL/TLS
+- If you have 2FA enabled, you might need to generate an app password from GoDaddy's control panel
+
+**For Gmail setup:**
+
+- Enable 2-Step Verification in your Google Account
+- Go to Security > App passwords
+- Generate a new app password for "Mail"
+- Use that password in `EMAIL_PASS`
+
+**For other email providers:**
+
+- Update the SMTP settings in `app/api/chat/route.ts` to match your provider
+- Use appropriate credentials for your email service
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

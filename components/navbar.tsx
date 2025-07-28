@@ -5,6 +5,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { StarBorder } from "@/components/ui/star-border";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import Image from "next/image";
+import Chatbot from "@/components/chatbot";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -80,16 +81,18 @@ export default function Navbar() {
             ))}
 
             {/* CTA Button */}
-            <StarBorder
-              className="text-sm font-medium"
-              color="#ff6b35"
-              speed="5s"
-            >
-              <span className="flex items-center gap-2">
-                Get Started
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </StarBorder>
+            <Chatbot>
+              <StarBorder
+                className="text-sm font-medium"
+                color="#ff6b35"
+                speed="5s"
+              >
+                <span className="flex items-center gap-2">
+                  Get Started
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              </StarBorder>
+            </Chatbot>
           </div>
 
           {/* Mobile menu button */}
