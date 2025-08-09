@@ -153,7 +153,7 @@ export default function HeroSection() {
 
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
           Web apps, mobile apps, chatbots, voice agents, automations — we can do
-          it all!
+          it all! Whether you need a simple landing page or a complex
         </p>
 
         {/* Star Border CTA Button */}

@@ -24,7 +24,7 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="flex items-center gap-6">
             <a
-              href="#services"
+              href="/#services"
               className="text-gray-400 hover:text-orange-400 transition-colors duration-300 text-sm"
             >
               Services

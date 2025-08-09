@@ -46,7 +46,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="relative py-24 bg-black overflow-hidden">
+    <section id="services" className="relative py-24 bg-black overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl animate-pulse" />
