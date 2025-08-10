@@ -7,30 +7,30 @@ import Image from "next/image";
 const cofounders = [
   {
     name: "Zulekha",
-    role: "All-Rounder — Tech & Client",
+    role: "Founder & CEO",
     email: "zulekha@buildit4me.com",
     linkedin: "https://linkedin.com/in/zulekha",
     photo: "/zulele.jpeg",
     description:
       "Leading strategy and client relationships with technical expertise.",
   },
-  {
-    name: "Hamza",
-    role: "Tech & Operations",
-    email: "hamza@buildit4me.com",
-    linkedin: "https://linkedin.com/in/hamza",
-    photo: "/hamza.jpeg",
-    description: "Driving automation and AI solutions for scalable operations.",
-  },
-  {
-    name: "Narmeen",
-    role: "Client Success & PM",
-    email: "narmeen@buildit4me.com",
-    linkedin: "https://linkedin.com/in/narmeen",
-    photo: "/nemo.jpeg",
-    description:
-      "Ensuring project delivery and client satisfaction excellence.",
-  },
+  // {
+  //   name: "Hamza",
+  //   role: "Tech & Operations",
+  //   email: "hamza@buildit4me.com",
+  //   linkedin: "https://linkedin.com/in/hamza",
+  //   photo: "/hamza.jpeg",
+  //   description: "Driving automation and AI solutions for scalable operations.",
+  // },
+  // {
+  //   name: "Narmeen",
+  //   role: "Client Success & PM",
+  //   email: "narmeen@buildit4me.com",
+  //   linkedin: "https://linkedin.com/in/narmeen",
+  //   photo: "/nemo.jpeg",
+  //   description:
+  //     "Ensuring project delivery and client satisfaction excellence.",
+  // },
 ];
 
 export default function TeamSection() {
